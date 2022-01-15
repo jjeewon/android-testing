@@ -60,4 +60,12 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+
+    kapt 'org.xerial:sqlite-jdbc:3.34.0'// m1 맥북 에러 대응
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
+    // implementation : app + test
+    // testImplementation : only test
+    // androidTestImplementation : only androidTest
+
 }
