@@ -1,11 +1,15 @@
 package com.example.android.architecture.blueprints.todoapp.tasks
 
+import androidx.test.core.app.ApplicationProvider
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Test
+import org.junit.runner.RunWith
 
 /*
 viewmodel 테스트를 local test로 하는 이유
 viewmodel 코드가 안드로이드 프레임워크나 OS에 의존하고 있으면 안됨
  */
+@RunWith(AndroidJUnit4::class)
 class TasksViewModelTest{
     @Test
     fun addNewTask_setsNewTaskEvent() {
@@ -17,11 +21,11 @@ class TasksViewModelTest{
         // AndroidX Test library는 테스트용으로 쓸 수 있는 Application, Activity 같은 컴포넌트
         // 들을 제공하는 class와 method들을 가지고 있음!
         // 따라서 local test를 하는데 simulated Android framework 클래스들이 필요하다면, AndroidX Test 라이브러리 이용하면 돼
-
-
+        val tasksViewModel = TasksViewModel(ApplicationProvider.getApplicationContext())
 
         // 2. When adding a new task
-
+        
         // 3. Then the new task event is triggered
+
     }
 }
